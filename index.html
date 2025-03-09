@@ -7,12 +7,18 @@
 </head>
 <body>
     <div class="container">
-        <button id="themeToggle" class="theme-toggle">
-            <span class="sun">☀️</span>
-            <span class="moon">🌙</span>
-        </button>
+        <div class="controls">
+            <button id="themeToggle" class="theme-toggle">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </button>
+            <button id="styleToggle" class="style-toggle">现代</button>
+        </div>
+        
         <div class="date-display"></div>
-        <div class="clock">
+        
+        <!-- 翻页时钟 -->
+        <div class="clock flip-clock">
             <div class="flipper hours">
                 <div class="card current"></div>
                 <div class="card next"></div>
@@ -27,6 +33,15 @@
                 <div class="card current"></div>
                 <div class="card next"></div>
             </div>
+        </div>
+
+        <!-- 像素时钟 -->
+        <div class="clock pixel-clock hidden">
+            <div class="pixel-digit hours"></div>
+            <div class="pixel-divider">:</div>
+            <div class="pixel-digit minutes"></div>
+            <div class="pixel-divider">:</div>
+            <div class="pixel-digit seconds"></div>
         </div>
     </div>
     <script src="script.js"></script>
